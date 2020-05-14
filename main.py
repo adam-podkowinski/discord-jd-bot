@@ -33,7 +33,9 @@ async def on_message(message):
             await message.channel.send('Hi')
         elif message.content == '!users':
             await message.channel.send(f'''Number of Members: {id.member_count}''')
-
+    else:
+        print(
+            f'''User: {message.author} tried to do command {message.content}, in channel {message.channel}''')
 
 print('Running client...')
 client.run(token)
